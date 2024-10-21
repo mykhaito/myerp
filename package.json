@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/myerp/",
+    "build": "vite build --base=/myerp3/",
     "preview": "vite preview"
   },
   "devDependencies": {
