@@ -1,4 +1,4 @@
-(() => {
+document.addEventListener('DOMContentLoaded', () => {
   const refs = {
     // Додати атрибут data-privacy-open на кнопку відкриття
     openModalBtn: document.querySelector('[data-privacy-open]'),
@@ -8,11 +8,15 @@
     modal: document.querySelector('[data-privacy]'),
   };
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+  if (refs.openModalBtn && refs.closeModalBtn && refs.modal) {
+    refs.openModalBtn.addEventListener('click', toggleModal);
+    refs.closeModalBtn.addEventListener('click', toggleModal);
+  } else {
+    console.error('Some elements for the privacy modal are missing in the DOM.');
+  }
 
   function toggleModal() {
     // is-open це клас який буде додаватися/забиратися на бекдроп при натисканні на кнопки
     refs.modal.classList.toggle('is-open');
   }
-})();
+});

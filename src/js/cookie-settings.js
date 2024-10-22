@@ -1,4 +1,4 @@
-(() => {
+document.addEventListener('DOMContentLoaded', () => {
   const refs = {
     // Додати атрибут data-cookie-open на кнопку відкриття
     openModalBtn: document.querySelector('[data-cookie-open]'),
@@ -8,6 +8,11 @@
     modal: document.querySelector('[data-cookie]'),
   };
 
+  if (!refs.openModalBtn || !refs.closeModalBtn || !refs.modal) {
+    console.error('Some elements for cookie modal are missing in the DOM');
+    return;
+  }
+
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
@@ -15,4 +20,4 @@
     // is-open це клас який буде додаватися/забиратися на бекдроп при натисканні на кнопки
     refs.modal.classList.toggle('is-open');
   }
-})();
+});

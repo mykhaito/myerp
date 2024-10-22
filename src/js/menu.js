@@ -1,4 +1,4 @@
-(() => {
+document.addEventListener('DOMContentLoaded', () => {
   const refs = {
     // Додати атрибут data-menu-open на кнопку відкриття
     openModalBtn: document.querySelector('[data-menu-open]'),
@@ -8,11 +8,15 @@
     modal: document.querySelector('[data-menu]'),
   };
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+  if (refs.openModalBtn && refs.closeModalBtn && refs.modal) {
+    refs.openModalBtn.addEventListener('click', toggleModal);
+    refs.closeModalBtn.addEventListener('click', toggleModal);
+  } else {
+    console.error('Some elements for the menu modal are missing in the DOM.');
+  }
 
   function toggleModal() {
     // is-open це клас який буде додаватися/забиратися на бекдроп при натисканні на кнопки
     refs.modal.classList.toggle('is-open');
   }
-})();
+});
