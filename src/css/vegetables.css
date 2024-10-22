@@ -1,0 +1,97 @@
+/* Styles for Mobile devices */
+
+.header-vegetables {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.span-vegetables {
+  color: rgba(251, 251, 251, 0.3);
+}
+
+.description-vegetables {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  margin-bottom: 40px;
+}
+
+.card-list-vegetables {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card-vegetables {
+  border-radius: 40px;
+  padding: 32px 26px;
+  width: 100%;
+  background-color: #fbfbfb;
+}
+
+.card-vegetables-name {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+
+.card-vegetables-description {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  .header-vegetables {
+    font-size: 64px;
+    line-height: 1;
+
+    max-width: 508px;
+  }
+
+  .description-vegetables {
+    font-size: 16px;
+    width: 626px;
+    margin-bottom: 50px;
+    line-height: 1.25;
+  }
+
+  .card-list-vegetables {
+    row-gap: 28px;
+  }
+
+  .card-vegetables {
+    padding: 32px 30px;
+    width: calc((100% - 20px) / 2);
+  }
+
+  .card-vegetables-name {
+    font-size: 32px;
+  }
+
+  .card-vegetables-description {
+    margin-bottom: 10px;
+  }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1280px) {
+  .card-list-vegetables {
+    column-gap: 21px;
+  }
+
+  .card-vegetables {
+    padding: 32px;
+    width: calc((100% - 42px) / 3);
+  }
+}
